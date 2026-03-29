@@ -1,0 +1,183 @@
+addict==2.4.0
+annotated-types==0.7.0
+anyio==4.9.0
+argon2-cffi==23.1.0
+argon2-cffi-bindings==21.2.0
+arithmetic @ file:///home/mistlab/Documents/ml/MAGiC-SLAM/ideas/FCGS/submodules/arithmetic
+arrow==1.3.0
+asttokens==3.0.0
+async-lru==2.0.5
+attrs==25.3.0
+babel==2.17.0
+beautifulsoup4==4.13.3
+bleach==6.2.0
+blinker==1.9.0
+Brotli @ file:///croot/brotli-split_1736182456865/work
+certifi @ file:///home/conda/feedstock_root/build_artifacts/certifi_1739515848642/work/certifi
+cffi==1.17.1
+charset-normalizer @ file:///croot/charset-normalizer_1721748349566/work
+click==8.1.8
+comm==0.2.2
+ConfigArgParse==1.7
+contourpy==1.3.1
+cycler==0.12.1
+dash==3.0.0
+debugpy==1.8.13
+decorator==5.2.1
+defusedxml==0.7.1
+diff_gaussian_rasterization @ file:///home/mistlab/Documents/ml/MAGiC-SLAM/ideas/FCGS/submodules/diff-gaussian-rasterization
+docker-pycreds==0.4.0
+executing==2.2.0
+faiss==1.8.0
+fastjsonschema==2.21.1
+filelock @ file:///croot/filelock_1700591183607/work
+Flask==3.0.3
+fonttools==4.56.0
+fqdn==1.5.1
+freqencoder @ file:///home/mistlab/Documents/ml/MAGiC-SLAM/ideas/FCGS/submodules/freqencoder
+fsspec==2025.3.0
+gaussian_rasterizer @ git+https://github.com/VladimirYugay/gaussian_rasterizer.git@9c40173fcc8d9b16778a1a8040295bc2f9ebf129
+gitdb==4.0.12
+GitPython==3.1.44
+gmpy2 @ file:///croot/gmpy2_1738085463648/work
+graphslam==0.0.17
+gridcreater @ file:///home/mistlab/Documents/ml/MAGiC-SLAM/ideas/FCGS/submodules/gridcreater
+gridencoder @ file:///home/mistlab/Documents/ml/MAGiC-SLAM/ideas/FCGS/submodules/gridencoder
+h11==0.14.0
+httpcore==1.0.7
+httpx==0.28.1
+huggingface-hub==0.29.3
+idna @ file:///croot/idna_1714398848350/work
+imageio==2.37.0
+imageio-ffmpeg==0.6.0
+importlib_metadata==8.6.1
+ipykernel==6.29.5
+ipython==9.0.2
+ipython_pygments_lexers==1.1.1
+ipywidgets==8.1.5
+isoduration==20.11.0
+itsdangerous==2.2.0
+jedi==0.19.2
+Jinja2 @ file:///croot/jinja2_1741710844255/work
+joblib==1.4.2
+json5==0.10.0
+jsonpointer==3.0.0
+jsonschema==4.23.0
+jsonschema-specifications==2024.10.1
+jupyter==1.1.1
+jupyter-console==6.6.3
+jupyter-events==0.12.0
+jupyter-lsp==2.2.5
+jupyter_client==8.6.3
+jupyter_core==5.7.2
+jupyter_server==2.15.0
+jupyter_server_terminals==0.5.3
+jupyterlab==4.3.6
+jupyterlab_pygments==0.3.0
+jupyterlab_server==2.27.3
+jupyterlab_widgets==3.0.13
+kiwisolver==1.4.8
+lightning-utilities==0.14.1
+lpips==0.1.4
+MarkupSafe @ file:///croot/markupsafe_1738584038848/work
+matplotlib==3.10.1
+matplotlib-inline==0.1.7
+mistune==3.1.3
+mkl-service==2.4.0
+mkl_fft @ file:///io/mkl313/mkl_fft_1730824109137/work
+mkl_random @ file:///io/mkl313/mkl_random_1730823916628/work
+moviepy==2.1.2
+mpmath @ file:///croot/mpmath_1690848262763/work
+narwhals==1.31.0
+nbclient==0.10.2
+nbconvert==7.16.6
+nbformat==5.10.4
+nest-asyncio==1.6.0
+networkx @ file:///croot/networkx_1737039604450/work
+notebook==7.3.3
+notebook_shim==0.2.4
+numpy @ file:///croot/numpy_and_numpy_base_1708638617955/work/dist/numpy-1.26.4-cp311-cp311-linux_x86_64.whl#sha256=5f96f274d410a1682519282ae769c877d32fdbf171aa8badec7bf5e1d3a1748a
+open3d==0.18.0
+opencv-python==4.11.0.86
+overrides==7.7.0
+packaging @ file:///home/conda/feedstock_root/build_artifacts/packaging_1733203243479/work
+pandas==2.2.3
+pandocfilters==1.5.1
+parso==0.8.4
+pexpect==4.9.0
+pillow==10.4.0
+platformdirs==4.3.7
+plotly==6.0.1
+plyfile==1.1
+proglog==0.1.11
+projectaria-tools==1.5.7
+prometheus_client==0.21.1
+prompt_toolkit==3.0.50
+protobuf==5.29.4
+psutil==7.0.0
+ptyprocess==0.7.0
+pure_eval==0.2.3
+pyarrow==19.0.1
+pycparser==2.22
+pydantic==2.10.6
+pydantic_core==2.27.2
+Pygments==2.19.1
+pyparsing==3.2.1
+pyquaternion==0.9.9
+PySocks @ file:///work/ci_py311/pysocks_1676822712504/work
+python-dateutil==2.9.0.post0
+python-dotenv==1.1.0
+python-json-logger==3.3.0
+pytorch-msssim==1.0.0
+pytz==2025.1
+PyYAML @ file:///croot/pyyaml_1728657952215/work
+pyzmq==26.3.0
+referencing==0.36.2
+regex==2024.11.6
+requests @ file:///croot/requests_1730999120400/work
+rerun-sdk==0.22.1
+retrying==1.3.4
+rfc3339-validator==0.1.4
+rfc3986-validator==0.1.1
+roma==1.5.2.1
+rpds-py==0.23.1
+safetensors==0.5.3
+scikit-learn==1.6.1
+scipy==1.15.2
+Send2Trash==1.8.3
+sentry-sdk==2.23.1
+setproctitle==1.3.5
+simple_knn @ git+https://github.com/VladimirYugay/simple-knn.git@c7e51a06a4cd84c25e769fee29ab391fe5d5ff8d
+six==1.17.0
+smmap==5.0.2
+sniffio==1.3.1
+soupsieve==2.6
+stack-data==0.6.3
+stringcase==1.2.0
+sympy==1.13.1
+terminado==0.18.1
+threadpoolctl==3.6.0
+tinycss2==1.4.0
+tokenizers==0.21.1
+torch==2.5.1
+torchmetrics==1.6.3
+torchvision==0.20.1
+tornado==6.4.2
+tqdm==4.67.1
+traitlets==5.14.3
+transformers==4.49.0
+trimesh==4.6.5
+triton==3.1.0
+types-python-dateutil==2.9.0.20241206
+typing_extensions @ file:///croot/typing_extensions_1734714854207/work
+tzdata==2025.1
+uri-template==1.3.0
+urllib3 @ file:///croot/urllib3_1737133630106/work
+wandb==0.19.8
+wcwidth==0.2.13
+webcolors==24.11.1
+webencodings==0.5.1
+websocket-client==1.8.0
+Werkzeug==3.0.6
+widgetsnbextension==4.0.13
+zipp==3.21.0
