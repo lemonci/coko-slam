@@ -105,11 +105,13 @@ class MAGiCSLAM(object):
                 agents_submaps, intra_loops, register_submaps, max_threads=20)
             inter_loops = register_agents_submaps(
                 agents_submaps, inter_loops, register_submaps, max_threads=20)
-        elif self.config["submap"]["anchor_data"] == "depth" or "render_depth":
+        elif self.config["submap"]["anchor_data"] == "depth" or self.config["submap"]["anchor_data"] =="render_depth":
+            init_unknown = self.config["submap"]["initial_transformation_unknown"]
+            registration_fn = lambda s, r: register_submaps_depth(s, r, init_unknown)
             intra_loops = register_agents_submaps_depth(
-                agents_submaps, intra_loops, register_submaps_depth, max_threads=1)
+                agents_submaps, intra_loops, registration_fn, max_threads=1)
             inter_loops = register_agents_submaps_depth(
-                agents_submaps, inter_loops, register_submaps_depth, max_threads=1)
+                agents_submaps, inter_loops, registration_fn, max_threads=1)
         else:
             raise ValueError(f"Unknown anchor data type: {self.config['submap']['anchor_data']}")
 

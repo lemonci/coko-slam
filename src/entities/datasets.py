@@ -159,8 +159,9 @@ class TUM_RGBD(torch.utils.data.Dataset):
         self.depth_paths = []
         self.poses = []
         self.color_transform = torchvision.transforms.ToTensor()
+        normalize_poses = dataset_config.get("initial_transformation_unknown", True)
         self.color_paths, self.depth_paths, self.poses = self.loadtum(
-            self.dataset_path, frame_rate=32)
+            self.dataset_path, frame_rate=32, normalize_poses=normalize_poses)
         
     def __len__(self):
         return len(self.color_paths) if self.frame_limit < 0 else int(self.frame_limit)
@@ -184,7 +185,7 @@ class TUM_RGBD(torch.utils.data.Dataset):
                     associations.append((i, j, k))
         return associations
 
-    def loadtum(self, datapath, frame_rate=-1):
+    def loadtum(self, datapath, frame_rate=-1, normalize_poses=True):
         """ read video data in tum-rgbd format """
         if os.path.isfile(os.path.join(datapath, 'groundtruth.txt')):
             pose_list = os.path.join(datapath, 'groundtruth.txt')
@@ -219,11 +220,12 @@ class TUM_RGBD(torch.utils.data.Dataset):
             images += [os.path.join(datapath, image_data[i, 1])]
             depths += [os.path.join(datapath, depth_data[j, 1])]
             c2w = self.pose_matrix_from_quaternion(pose_vecs[k])
-            if inv_pose is None:
-                inv_pose = np.linalg.inv(c2w)
-                c2w = np.eye(4)
-            else:
-                c2w = inv_pose@c2w
+            if normalize_poses:
+                if inv_pose is None:
+                    inv_pose = np.linalg.inv(c2w)
+                    c2w = np.eye(4)
+                else:
+                    c2w = inv_pose @ c2w
             poses += [c2w.astype(np.float32)]
 
         return images, depths, poses
