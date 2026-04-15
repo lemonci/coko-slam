@@ -196,11 +196,15 @@ def register_agents_submaps(agents_submaps: dict, registrations: list,
         agents_submaps, registration) for registration in registrations)
     return registrations
 
-def register_submaps_depth(agents_submaps: dict, registration: Registration):
+def register_submaps_depth(agents_submaps: dict, registration: Registration,
+                           initial_transformation_unknown: bool = True):
     """ Register two submaps using ICP.
     Args:
         agents_submaps: A dictionary of agent submaps.
         registration: The registration object.
+        initial_transformation_unknown: If True, use FPFH+RANSAC coarse registration as the
+            initial guess for inter-agent loops. If False, the odometry-based init_transformation
+            set by detect_loops() is used directly (assumes a known relative pose between agents).
     Returns:
         registration: The registration object with the transformation and fitness updated.
     """
@@ -211,7 +215,7 @@ def register_submaps_depth(agents_submaps: dict, registration: Registration):
     source_cloud = utils.get_pcd_from_rgbd(source_submap)
     target_cloud = utils.get_pcd_from_rgbd(target_submap)
 
-    if source_submap['agent_id'] != target_submap['agent_id']:
+    if source_submap['agent_id'] != target_submap['agent_id'] and initial_transformation_unknown:
         registration.init_transformation = coarse_registration(source_cloud, target_cloud)
 
     source_cloud.estimate_normals()

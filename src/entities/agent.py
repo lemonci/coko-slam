@@ -42,7 +42,7 @@ class Agent(object):
 
         self.scene_name = config["data"]["scene_name"]
         self.dataset_name = config["dataset_name"]
-        agent_input_path = sorted(Path(config["data"]["input_path"]).glob("*"))[self.agent_id]
+        agent_input_path = sorted(p for p in Path(config["data"]["input_path"]).glob("*") if not p.name.startswith("."))[self.agent_id]
         self.config["data"]["input_path"] = str(agent_input_path)
         self.dataset = get_dataset(config["dataset_name"])({**self.config["data"], **self.config["cam"], **self.config["submap"]})
 
